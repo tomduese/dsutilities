@@ -72,7 +72,13 @@ def plot_GD(X, y, n_iter,lr, ax, ax1=None):
         _ = ax1.plot(range(n_iter), cost_history, 'b.')  
 
 def plot_GD_with_iter(X, y):
-    fig = plt.figure(figsize=(30,25), dpi=200)
+    """
+    X = 2 * np.random.rand(100,1)
+    y = 4 + 3 * X + np.random.randn(100,1)
+    fig = gd.plot_GD_with_iter(X,y)
+    plt.show()
+    """
+    fig = plt.figure(figsize=(10,8))
     fig.subplots_adjust(hspace=0.4, wspace=0.4)
 
     it_lr = [(2000,0.001), (500,0.01), (200,0.05), (100,0.1)]
@@ -88,6 +94,7 @@ def plot_GD_with_iter(X, y):
         ax.set_title("lr:{}".format(lr))
         ax1.set_title("Iterations:{}".format(n_iter))
         plot_GD(X, y, n_iter, lr, ax, ax1)
+    return fig
 
 def stochastic_gradient_descent(X, y, b, learning_rate=0.01, iterations=10):
     '''
