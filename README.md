@@ -1,6 +1,15 @@
 # ds-utilities
-This repository contains a bunch of functions for recently used functions in data science. The idea is to use it as a git submodule in any given repository you are working on. To add a submodule to a repository you can find information here. https://git-scm.com/book/en/v2/Git-Tools-Submodules
+This repository contains a bunch of functions for recently used functions in data science. The idea is to use it as a git submodule in any given repository you are working on. 
 
+### Set up in parent repository
+To add a submodule to a repository you can find information here https://git-scm.com/book/en/v2/Git-Tools-Submodules and you can run the following commands in the parent repository:
+
+```bash
+cd path/to/parent-repository
+git submodule add git@github.com:tomduese/ds-utilities.git
+git commit -am "add ds-utilities"
+git push origin master
+```
 ### Environment
 
 This repo contains a requirements.txt file with a list of all the packages and dependencies you will need. Before you install the virtual environment, make sure to install postgresql if you haven't done it before.
