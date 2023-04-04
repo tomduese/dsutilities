@@ -128,3 +128,35 @@ def stochastic_gradient_descent(X, y, b, learning_rate=0.01, iterations=10):
         cost_history[it] = cost / n
 
     return b, cost_history
+
+def minibatch_gradient_descent(X, y, b, learning_rate=0.01, iterations=10, batch_size=20):
+    '''
+    X    = Matrix of X without added bias units
+    y    = Vector of y
+    b    = Vector of parameters np.random.randn(j,1)
+    learning_rate 
+    iterations = # of iterations
+    
+    Returns the final b vector and array of cost history over # of iterations
+    '''
+    n = len(y)
+    cost_history = np.zeros(iterations)
+    
+    for it in range(iterations):
+        cost = 0.0
+        indices = np.random.permutation(n)
+        X = X[indices]
+        y = y[indices]
+        for ind, i in enumerate(range(0, n, batch_size)):
+            X_i = X[i:i+batch_size]
+            y_i = y[i:i+batch_size]
+            
+            X_i = np.c_[np.ones(len(X_i)),X_i]
+           
+            prediction = np.dot(X_i, b)
+
+            b = b - (1/batch_size) * learning_rate * (X_i.T.dot((prediction - y_i)))
+            cost += cal_cost(b, X_i, y_i)
+        cost_history[it]  = cost/(ind+1)     # cost/number of batches
+        
+    return b, cost_history
