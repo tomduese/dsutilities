@@ -9,3 +9,4 @@ python-dotenv==0.19.0
 psycopg2-binary==2.9.3
 SQLAlchemy==1.4.25
 missingno==0.5.1
+statsmodels==0.13.5
