@@ -5,9 +5,8 @@ This repository contains a bunch of functions for recently used functions in dat
 To add a submodule to a repository you can find information here https://git-scm.com/book/en/v2/Git-Tools-Submodules and you can run the following commands in the parent repository:
 
 ```bash
-cd path/to/parent-repository
-git submodule add git@github.com:tomduese/ds-utilities.git
-git commit -am "add ds-utilities"
+git submodule add git@github.com:tomduese/dsutilities.git
+git commit -am "add dsutilities"
 git push origin master
 ```
 ### Environment
