@@ -1,5 +1,5 @@
 # ds-utilities
-This repository contains a bunch of functions for recently used functions in data science
+This repository contains a bunch of functions for recently used functions in data science. The idea is to use it as a git submodule in any given repository you are working on. To add a submodule to a repository you can find information here. https://github.com/tomduese/ds-utilities
 
 ### Environment
 
@@ -19,3 +19,4 @@ source .venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
+
