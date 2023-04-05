@@ -1,4 +1,4 @@
-# ds-utilities
+# dsutilities
 This repository contains a bunch of functions for recently used functions in data science. The idea is to use it as a git submodule in any given repository you are working on. 
 
 ### Set up in parent repository
