@@ -17,28 +17,8 @@ def drop_duplicates(df):
     return df
 
 
-def make_columns_python_friendly(df):
-    """
-    Modify DataFrame column names to be more Python friendly:
-    - Replace spaces with underscores
-    - Convert all characters to lowercase
-    - Remove special characters
+import re
 
-    :param df: Input DataFrame
-    :return: Modified DataFrame with Python friendly column names
-    """
-    import re
-
-    def clean_column_name(column):
-        column = column.lower()  # Convert to lowercase
-        column = column.replace(" ", "_")  # Replace spaces with underscores
-        column = re.sub(r"\W", "", column)  # Remove special characters
-        column = re.sub(
-            r"^(\d)", r"_\1", column
-        )  # Add underscore if starts with a number
-        return column
-
-    # Apply the transformation to each column name
-    df.columns = [clean_column_name(col) for col in df.columns]
-
+def clean_columnnames(df):
+    df.columns = [re.sub(r'\W', '', col.lower().replace(' ', '_').lstrip('0123456789_')) for col in df.columns]
     return df
