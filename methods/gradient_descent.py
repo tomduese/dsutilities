@@ -20,11 +20,11 @@ def cal_cost(b, X, y):
     return cost
 
 
-def gradient_descent(X, y, b, learning_rate=0.01, iterations=100):
+def gradient_descent_batch(X, y, b, learning_rate=0.01, iterations=100):
     """
-    X          = Matrix of X with added bias units
-    y          = Vector of y
-    b          = Vector of parameters np.random.randn(j,1)
+    X = Matrix of X with added bias units
+    y = Vector of y
+    b = Vector of parameters np.random.randn(j,1)
     learning_rate
     iterations = # of iterations
 
@@ -129,34 +129,83 @@ def stochastic_gradient_descent(X, y, b, learning_rate=0.01, iterations=10):
 
     return b, cost_history
 
-def minibatch_gradient_descent(X, y, b, learning_rate=0.01, iterations=10, batch_size=20):
-    '''
+
+def minibatch_gradient_descent(
+    X, y, b, learning_rate=0.01, iterations=10, batch_size=20
+):
+    """
     X    = Matrix of X without added bias units
     y    = Vector of y
     b    = Vector of parameters np.random.randn(j,1)
-    learning_rate 
+    learning_rate
     iterations = # of iterations
-    
+
     Returns the final b vector and array of cost history over # of iterations
-    '''
+    """
     n = len(y)
     cost_history = np.zeros(iterations)
-    
+
     for it in range(iterations):
         cost = 0.0
         indices = np.random.permutation(n)
         X = X[indices]
         y = y[indices]
         for ind, i in enumerate(range(0, n, batch_size)):
-            X_i = X[i:i+batch_size]
-            y_i = y[i:i+batch_size]
-            
-            X_i = np.c_[np.ones(len(X_i)),X_i]
-           
+            X_i = X[i : i + batch_size]
+            y_i = y[i : i + batch_size]
+
+            X_i = np.c_[np.ones(len(X_i)), X_i]
+
             prediction = np.dot(X_i, b)
 
-            b = b - (1/batch_size) * learning_rate * (X_i.T.dot((prediction - y_i)))
+            b = b - (1 / batch_size) * learning_rate * (X_i.T.dot((prediction - y_i)))
             cost += cal_cost(b, X_i, y_i)
-        cost_history[it]  = cost/(ind+1)     # cost/number of batches
-        
+        cost_history[it] = cost / (ind + 1)  # cost/number of batches
+
     return b, cost_history
+
+
+def gradient_descent(
+    max_iterations,
+    threshold,
+    b_init,
+    obj_func,
+    grad_func,
+    learning_rate=0.05,
+    momentum=0.8,
+):
+    """
+    Input:
+    - max_iterations  : Maximum number of iterations to run
+    - threshold       : Stop if the difference in function values between two successive iterations falls below this threshold
+    - b_init          : Initial point from where to start gradient descent
+    - obj_func        : Reference to the function that computes the objective function
+    - grad_func       : Reference to the function that computes the gradient of the function
+    - learning_rate   : Step size for gradient descent. It should be in [0,1]
+    - momentum        : Momentum to use. It should be in [0,1]
+    Output:
+    - b_history       : All points in space, visited by gradient descent at which the objective function was evaluated
+    - f_history       : Corresponding value of the objective function computed at each point
+    """
+
+    b = b_init
+    b_history = b
+    f_history = obj_func(b)
+    delta_b = np.zeros(b.shape)
+    i = 0
+    diff = 1.0e10
+
+    while i < max_iterations and diff > threshold:
+        delta_b = -learning_rate * grad_func(b) + momentum * delta_b
+        b = b + delta_b
+
+        # store the history of w and f
+        b_history = np.vstack((b_history, b))
+        f_history = np.vstack((f_history, obj_func(b)))
+
+        # update iteration number and diff between successive values
+        # of objective function
+        i += 1
+        diff = np.absolute(f_history[-1] - f_history[-2])
+
+    return b_history, f_history
