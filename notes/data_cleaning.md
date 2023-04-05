@@ -73,7 +73,3 @@ df.fillna(method='bfill') #backward fill
 df.fillna(method='ffill', axis=1)
 df.fillna(method='ffill', limit=1)
 ```
-
-
-
-

@@ -15,3 +15,10 @@ def drop_duplicates(df):
         df.reset_index(inplace=True, drop=True)
     df.head(5)
     return df
+
+
+import re
+
+def clean_columnnames(df):
+    df.columns = [re.sub(r'\W', '', col.lower().replace(' ', '_').lstrip('0123456789_')) for col in df.columns]
+    return df

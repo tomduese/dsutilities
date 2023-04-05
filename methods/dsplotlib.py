@@ -17,5 +17,3 @@ def corrplot(corr):
     plt.xticks(rotation=25, fontsize=12)
     plt.yticks(fontsize=12)
     return fig, ax
-
-
