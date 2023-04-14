@@ -11,20 +11,15 @@ git push origin master
 ```
 ### Environment
 
-This repo contains a requirements.txt file with a list of all the packages and dependencies you will need. Before you install the virtual environment, make sure to install postgresql if you haven't done it before.
+This repo contains a requirements.txt file with a list of all the packages and dependencies you will need. Before you install the virtual environment. In order to install the environment you can use the following commands:
+
 
 ```bash
-brew update
-brew install postgresql
-```
-
-In order to install the environment you can use the following commands:
-
-```
 pyenv local 3.9.8
 python -m venv .venv
 source .venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
+Be aware in case you want to use the submodule to install the environment in the parent repository and change the the last line accordingly to `pip install -r dsutilities/requirements.txt`
 

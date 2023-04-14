@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import seaborn as sns
+import numpy as np
 
 
 def corrplot(corr):
@@ -14,6 +15,12 @@ def corrplot(corr):
         xticklabels=corr.columns,
     )
     plt.title("Your title", fontsize=20)  # title with fontsize 20
-    plt.xticks(rotation=25, fontsize=12)
+    plt.xticks(rotation=90, fontsize=12)
     plt.yticks(fontsize=12)
     return fig, ax
+
+
+def another_corrplot(df):
+    correlations = df.corr()
+    mask = np.triu(correlations)
+    sns.heatmap(correlations, vmax=1, vmin=-1, annot=True, mask=mask, cmap="YlGnBu")
