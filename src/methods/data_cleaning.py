@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import re
 
 
 def rename_columns(df):
@@ -16,9 +17,6 @@ def drop_duplicates(df):
         df.reset_index(inplace=True, drop=True)
     df.head(5)
     return df
-
-
-import re
 
 
 def clean_columnnames(df):

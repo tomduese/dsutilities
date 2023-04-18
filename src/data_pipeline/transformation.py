@@ -1,6 +1,5 @@
-import pandas as pd 
-import numpy as np 
-
+import pandas as pd
+import numpy as np
 
 
 def is_greater_than_average(series: pd.Series) -> pd.Series:
@@ -9,7 +8,13 @@ def is_greater_than_average(series: pd.Series) -> pd.Series:
     # return new_series   wrong but it would work with dataframes
     return pd.Series(new_series)
 
-def get_sum_score_by_brand_and_gender(frame: pd.DataFrame, brand_col="brand", gender_col="menWomen", score_by="size_greater_than_average") -> pd.DataFrame :
-    aggr = frame.groupby(by=[brand_col, gender_col],as_index=False)[score_by].sum()
+
+def get_sum_score_by_brand_and_gender(
+    frame: pd.DataFrame,
+    brand_col="brand",
+    gender_col="menWomen",
+    score_by="size_greater_than_average",
+) -> pd.DataFrame:
+    aggr = frame.groupby(by=[brand_col, gender_col], as_index=False)[score_by].sum()
 
     return aggr

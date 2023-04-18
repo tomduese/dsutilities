@@ -3,8 +3,9 @@ import typer
 
 app = typer.Typer()
 
+
 @app.command(help="adds one to the input")
-def run_add_one(x: int = typer.Option(0, help='enter an integer')):
+def run_add_one(x: int = typer.Option(0, help="enter an integer")):
     print(add_one(x))
 
 
