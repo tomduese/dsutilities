@@ -141,3 +141,9 @@ Python Packaging and Unit Testing https://github.com/neuefische/ds-unit-testing
 * Intro to Python Packaging
 * Intro to Unit Testing
 * Unit Testing for Data Science
+
+## 17.04 Decission Trees
+Decision Trees [https://github.com/neuefische/ds-unit-testing](https://github.com/neuefische/ds-decision-tree)
+* Decision Trees Classification
+* Decision Trees Regression
+* Decision Trees Recap
