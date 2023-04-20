@@ -37,3 +37,35 @@ def dataframe_insights(df):
             print(top_values)
 
         print("============================================")
+
+def nice_summary(df):
+    """
+    Generate a DataFrame that contains all of:
+        - .info()
+        - .nunique()
+        - .isnull() amount
+        - .isnull() percentage
+        - zero value amount
+        - .describe()
+
+    Args:
+        df: input DataFrame
+
+    Returns:
+        DataFrame: 14 informational columns. Input DF columns as rows.
+    """
+    return pd.concat([    
+                pd.DataFrame({
+                'Dtype': df.dtypes,
+                'nunique': df.nunique(),
+                'Non-Null Count': df.count(),
+                'Missing': df.isnull().sum(),        
+                'Missing %': round((df.isnull().sum()/df.shape[0])*100, 2),
+                'Zero Count': (df == 0).sum(),
+                })
+                ,df.describe().round(2).T.iloc[:,1:]
+            ], axis=1) \
+            .fillna('-') \
+            .reset_index() \
+            .rename(columns={'index': 'Columns'}) \
+            .replace({'Missing': 0, 'Missing %': 0}, '-')
