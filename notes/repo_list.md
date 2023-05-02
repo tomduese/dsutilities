@@ -1,5 +1,5 @@
 # __List of repositories bo-ds-23-1__
-
+<br/>
 week 1
 
 ---
@@ -31,6 +31,8 @@ Coding Challenge - Tic-Tac-Toe https://github.com/neuefische/ds-coding-tic-tac-t
 * Brief Introduction to Pseudocode
 * Tic-Tac-Toe
 
+<br/>
+
 ---
 week 2
 
@@ -57,6 +59,8 @@ REPO https://github.com/neuefische/ds-pandas-numpy
 ## 24.03 Visualization
 Visualisation Group Work https://github.com/neuefische/ds-visualisation-group-work 
 
+<br/>
+
 ---
 week 3
 
@@ -79,6 +83,8 @@ Group work - distributions https://github.com/neuefische/ds-group-work/blob/dist
 
 ## 29.-31.03 EDA project
 EDA project (template) https://github.com/neuefische/ds-eda-project-template 
+
+<br/>
 
 ---
 week 4
@@ -113,6 +119,9 @@ Logistic Regression https://github.com/neuefische/ds-logistic-regression
 * Logistic Regression sklearn
 * Multiclass Classification
 * Logistic Regression Exercise
+
+<br/>
+
 ---
 week 5
 
@@ -142,8 +151,63 @@ Python Packaging and Unit Testing https://github.com/neuefische/ds-unit-testing
 * Intro to Unit Testing
 * Unit Testing for Data Science
 
+<br/>
+
+---
+week 6
+
+---
 ## 17.04 Decission Trees
 Decision Trees [https://github.com/neuefische/ds-unit-testing](https://github.com/neuefische/ds-decision-tree)
 * Decision Trees Classification
 * Decision Trees Regression
 * Decision Trees Recap
+
+## 18.04 Diabetes Challenge
+Diabetes Challenge https://github.com/neuefische/ds-diabetes-challenge
+* Pipelines
+* Diabetes Challenge
+
+## 19.04 Random Forests
+Random Forest https://github.com/neuefische/ds-random-forest
+* Random Forest Sklearn
+* Random Forest Tutorial
+* Random Forest Exercise
+
+## 20.04 Ensemble Methods
+Ensemble Methods https://github.com/neuefische/ds-ensemble-methods
+* Voting Methods
+* XGBoost Example
+* Classification Exercise
+* Adaboost in Python
+
+## 21.04 Machine Learning Project
+Template Repo for ML Project https://github.com/neuefische/ds-ml-project-template  
+* EDA and modeling
+
+<br/>
+
+---
+week 7
+
+---
+## 24.-26.04 Machine Learning Project
+Template Repo for ML Project https://github.com/neuefische/ds-ml-project-template  
+* EDA and modeling
+
+## 27.-28.04 Artificial Neural Networks
+Artificial Neural Networks https://github.com/neuefische/ds-artificial-neural-networks
+* D1 - Building a Dense Neural Network
+* D2 - Basic regression - TensorFlow
+* D2 - Classification with Tensorflow/Keras
+* D2 - Overfit and Underfit
+* D2 - Load Models
+
+<br/>
+
+---
+week 8
+
+---
+
+..
