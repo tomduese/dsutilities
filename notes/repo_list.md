@@ -210,4 +210,37 @@ week 8
 
 ---
 
+## 02.05 Dense Neural Networks
+Artificial Neural Networks (day 3) https://github.com/neuefische/ds-artificial-neural-networks
+* D3 - DNN Assignment
+
+## 03.05 Natural Language Processing
+Intro to NLP https://github.com/neuefische/ds-intro-to-NLP 
+* Spam Classifier
+* Zero Shot Learning
+* Transformer Pipeline Models
+* Create Embeddings
+
+## 04.05 Take me home challenge
+Take me home Challenge https://github.com/neuefische/ds-take-me-home
+* Artsy Data Analyst Exercise
+* Data Scientist Prognostica
+* Data Scientist TriAD
+* Product Analyst Amboss
+* Senior Data Scientist / Engineer K
+
+
+## 05.05 Dimensionality Reduction
+Dimensionality Reduction https://github.com/neuefische/ds-dimensionality-reduction
+* Principal Component Analysis
+* t-SNE
+* Throwback to SVM with Principal Component Analysis
+
+<br/>
+
+---
+week 9
+
+---
+
 ..
