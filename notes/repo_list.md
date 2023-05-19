@@ -243,4 +243,25 @@ week 9
 
 ---
 
+## 08.05 Clustering
+
+Clustering https://github.com/neuefische/ds-clustering
+* Comparing Clustering Algorithms
+* Clustering for Customer Segmentation
+* Image Clustering
+* BONUS: Text Clustering
+
+## 09.05 Time Series
+
+Time Series https://github.com/neuefische/ds-time-series
+* Intro to EDA with Time Series
+* Time Series Stock Price Example
+* Time Series Moving average animation
+* Time Series Simulation
+
+<br/>
+
+---
+week 10
+
 ..
