@@ -44,8 +44,7 @@ Intro to SQL https://github.com/neuefische/ds-sql-intro
 * SQL Exercises Monalisa
 
 ## 22.-23.03 Pandas + Numpy
-Intro to Pandas and Numpy
-REPO https://github.com/neuefische/ds-pandas-numpy
+Intro to Pandas and Numpy https://github.com/neuefische/ds-pandas-numpy
 * Introduction to Pandas
 * Practice Pandas functionalities
 * Introduction to Pandas visualization
@@ -264,4 +263,37 @@ Time Series https://github.com/neuefische/ds-time-series
 ---
 week 10
 
-..
+---
+
+## 17.05 Convolutional neural networks
+
+Image Modeling https://github.com/neuefische/ds-image-modeling 
+* image-modeling
+* image-modeling 2
+
+<br/>
+
+---
+week 11
+
+---
+## no lectures (learning by doing)
+
+<br/>
+<br/>
+
+---
+week 12
+
+---
+
+## 01.06 API
+
+Deploying a model https://github.com/neuefische/ds-model-deployment
+* Deploying a model using FastAPI and Docker
+* Getting the data from the API
+
+<br/>
+
+---
+end of the Bootcamp
